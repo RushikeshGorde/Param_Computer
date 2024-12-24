@@ -1,0 +1,28 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+  }
+  
+  .nav-link-active {
+    @apply text-burgundy;
+  }
+  
+  .page-title {
+    @apply text-3xl font-bold text-midnight mb-6;
+  }
+  
+  .card {
+    @apply p-6 rounded-lg shadow-md bg-white hover:shadow-lg transition-shadow duration-200;
+  }
+}
