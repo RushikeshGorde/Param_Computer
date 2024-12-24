@@ -20,27 +20,7 @@ const products = [
     type: 'video',
     media: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.2-YoQKtjyrNpgVcVNMix8rYjBKLTKjKk.mp4'
   },
-  {
-    category: 'caps',
-    title: 'कॅप प्रिंटिंग',
-    description: 'कस्टम लोगो आणि डिझाइनसह कॅप प्रिंटिंग',
-    type: 'video',
-    media: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.3-qCt8mPWdHhtq2zNKrNjxnOY38q0n5j.mp4'
-  },
-  {
-    category: 'pillows',
-    title: 'पिलो प्रिंटिंग',
-    description: 'कस्टम फोटो आणि डिझाइनसह पिलो प्रिंटिंग',
-    type: 'video',
-    media: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.4-tm52KGayO6m1LZWfTmxWqq5fY8C5Yt.mp4'
-  },
-  {
-    category: 'keychains',
-    title: 'की-चेन प्रिंटिंग',
-    description: 'पर्सनलाइज्ड की-चेन प्रिंटिंग',
-    type: 'video',
-    media: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.5-Paaxx85C9EPvRSJTdDtZ4Vmg2vCHvn.mp4'
-  }
+  
 ]
 
 const Modal = ({ item, onClose }) => (

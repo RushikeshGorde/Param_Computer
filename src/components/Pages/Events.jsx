@@ -7,7 +7,7 @@ import { Calendar, MapPin, Users, X, Star, Phone } from 'lucide-react'
 const venueFeatures = [
   {
     title: "मुख्य हॉल",
-    description: "विशाल एसी हॉल, २०० + व्यक्तींची क्षमता",
+    description: "विशाल  हॉल, 15०० + व्यक्तींची क्षमता",
     icon: Users,
   },
   {
@@ -103,6 +103,20 @@ const Modal = ({ item, onClose }) => (
   </motion.div>
 )
 
+const LocationMap = () => (
+  <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-lg">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.284908277288!2d74.29908497347924!3d19.70049073207454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc551835a6be93%3A0x14b68df7396d25e5!2sMAHARAJA%20PALACE!5e0!3m2!1sen!2sin!4v1735050865375!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+  </div>
+)
+
 export default function Events() {
   const [selectedItem, setSelectedItem] = useState(null)
 
@@ -116,7 +130,7 @@ export default function Events() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            परम इवेंट्स
+            परम इव्हेंट
           </h1>
           <p className="text-xl text-white/90">
             आपल्या विशेष क्षणांसाठी सर्वोत्तम व्यवस्था
@@ -193,6 +207,16 @@ export default function Events() {
           ))}
         </motion.div>
 
+        {/* Location Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-16"
+        >
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">आमचे ठिकाण</h2>
+          <LocationMap />
+        </motion.div>
+
         {/* Contact Section */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -203,10 +227,10 @@ export default function Events() {
           <h2 className="text-2xl font-bold mb-4">बुकिंगसाठी संपर्क करा</h2>
           <div className="flex items-center justify-center gap-2">
             <Phone className="w-6 h-6" />
-            <p className="text-xl">७५०७५९९९९२</p>
+            <p className="text-xl">75075 99992</p>
           </div>
           <p className="mt-2 opacity-90">
-            ठिकाण: परम कॉम्पुटर, तळेगाव दिघे ता. संगमनेर
+            ठिकाण: MAHARAJA PALACE, P822+5MV, Talegaon Dighe, Maharashtra 422611
           </p>
         </motion.div>
       </div>
@@ -223,4 +247,3 @@ export default function Events() {
     </div>
   )
 }
-
